@@ -1,9 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Heading from '../components/Heading.astro'
+import Paragraph from '../components/Paragraph.astro'
+import NormalLink from '../components/NormalLink.astro'
+import Greeting from '../components/Greeting.jsx'
 ---
 
 <Layout title="home" description="liv to your fullest">
 <main>
-    <h1>Hiya world!</h1>
+    <div class="">
+      <Heading><Greeting client:load />!</Heading>
+      <Paragraph>Welcome to liv.town, in modern Norwegian, Swedish, and Danish, the name "liv" is homophonous with the word "liv" meaning "life". This is a little project for me to enjoy "a town of life" - and you're invited to <NormalLink href="/guestbook">plant something</NormalLink>!</Paragraph>
+    </div>
 </main>
 </Layout>
