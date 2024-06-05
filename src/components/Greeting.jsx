@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const greetingArray = [
+const greetingArray = [ // Should make it so that this is only the appropriate greetings
   "Hai",
   "Hey",
   "Salut",
