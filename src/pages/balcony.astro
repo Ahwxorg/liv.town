@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Heading from '../components/Heading.astro'
+import Paragraph from '../components/Paragraph.astro'
+import NormalLink from '../components/NormalLink.astro'
+import Greeting from '../components/Greeting.jsx'
+---
+
+<Layout title="Hometown" description="liv to your fullest">
+<main>
+    <div class="">
+      <Heading><Greeting client:load />!</Heading>
+      <Paragraph>Imagine liv.town being a neat house on top of a mountain, see this page as the balcony, this is a neat littly place where you can view over the valley. Each house in the valley is it's own little blog post.</Paragraph>
+      <Paragraph><center><NormalLink href="/guestbook">Dive in!</NormalLink></center></Paragraph>
+    </div>
+</main>
+</Layout>
