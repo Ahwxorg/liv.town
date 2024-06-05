@@ -1,28 +1,9 @@
 import React, { Component } from 'react';
 
 const greetingArray = [ // Should make it so that this is only the appropriate greetings
-  "Hai",
-  "Hey",
-  "Salut",
-  "¿Qué tal?",
-  "Nǐ hǎo",
-  "Ciao",
-  "Yā, Yō",
-  "Guten Tag",
-  "Oi",
-  "Anyoung",
-  "Ahlan",
-  "Halløj",
-  "Hujambo",
   "Hallo",
-  "Yassou",
-  "Cześć",
-  "Selamat siang",
-  "Namaskar",
-  "Hei",
-  "Selam",
-  "Shalom",
-  "Tjena",
+  "Hallå",
+  "Hej",
 ];
 
 
