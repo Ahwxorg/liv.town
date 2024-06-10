@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Heading from '../components/Heading.astro'
 import Paragraph from '../components/Paragraph.astro'
 import NormalLink from '../components/NormalLink.astro'
+import HeaderLink from '../components/HeaderLink.astro'
 import Greeting from '../components/Greeting.jsx'
 ---
 
@@ -10,7 +11,8 @@ import Greeting from '../components/Greeting.jsx'
 <main>
     <div class="">
       <Heading><Greeting client:load />!</Heading>
-      <Paragraph>Welcome to liv.town, in modern Norwegian, Swedish, and Danish, the name "liv" is homophonous with the word "liv" meaning "life". This is a little project for me to enjoy "a town of life" - and you're invited to <NormalLink href="/guestbook">plant something</NormalLink>!</Paragraph>
+      <Paragraph>Welcome to liv.town, in modern Norwegian, Swedish, and Danish, the name "liv" is homophonous with the word "liv" meaning "life". This is a little project for me to enjoy "a town of life" - and you're invited to <HeaderLink href="/terrace">plant something</HeaderLink>!</Paragraph>
     </div>
+    <aside transition:name="main-page">
 </main>
 </Layout>
