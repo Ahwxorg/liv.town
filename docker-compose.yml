@@ -2,5 +2,5 @@ version: '3'
 services:
   liv-town:
     ports:
-      - 4321:8080
+      - 4322:8080
     image: ghcr.io/ahwxorg/liv.town
