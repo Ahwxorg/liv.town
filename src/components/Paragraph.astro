@@ -1,3 +1,7 @@
-<div class="text-slate-300 ml-8 mr-8 md:ml-80 md:mr-80">
+---
+import { fade } from 'astro:transitions';
+---
+
+<div class="text-slate-300 ml-8 mr-8 md:ml-80 md:mr-80" transition:name='paragraph' transition:animate={fade({ duration: '0.5s' })}>
   <slot />
 </div>
