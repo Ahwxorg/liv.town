@@ -3,14 +3,16 @@ import Layout from '../layouts/Layout.astro';
 import Heading from '../components/Heading.astro'
 import Paragraph from '../components/Paragraph.astro'
 import NormalLink from '../components/NormalLink.astro'
+import Guestnote from '../components/Guestnote.astro'
 import Greeting from '../components/Greeting.jsx'
 ---
 
-<Layout title="Terrace" description="liv to your fullest">
+<Layout title="liv - terrace" description="liv to your fullest">
 <main>
     <div class="">
       <Heading><Greeting client:load />!</Heading>
       <Paragraph>there should be a guestbook here type beat</Paragraph>
+      <Guestnote />
     </div>
     <aside transition:name="main-page">
 </main>
