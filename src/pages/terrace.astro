@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Heading from '../components/Heading.astro'
 import Paragraph from '../components/Paragraph.astro'
 import NormalLink from '../components/NormalLink.astro'
-import Guestnote from '../components/Guestnote.astro'
+import Guestnotes from '../components/Guestnotes.astro'
 import Greeting from '../components/Greeting.jsx'
 ---
 
@@ -12,7 +12,7 @@ import Greeting from '../components/Greeting.jsx'
     <div class="">
       <Heading><Greeting client:load />!</Heading>
       <Paragraph>there should be a guestbook here type beat</Paragraph>
-      <Guestnote />
+      <Guestnotes />
     </div>
     <aside transition:name="main-page">
 </main>
