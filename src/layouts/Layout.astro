@@ -43,13 +43,23 @@ import { HOMEPAGE_URL } from '../config.ts';
     
     <!-- Disable Dark Reader -->
     <meta name="darkreader-lock">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <ViewTransitions />
   </head>
 
-  <body class="bg-black">
+  <body class="bg-cover bg-[url('/assets/img/background.png')] bg-black">
     <Navbar />
     <div>
       <slot />
+      <div class="fixed bottom-0 h-12 w-full flex pq2 z-20">
+        <div class="ml-8 mb-8">
+          <iframe class="m-0 p-0 border-none" src="https://status.ahwx.org/badge?theme=dark" scrolling="no" width="250" height="30" frameborder="0"></iframe>
+		</div>
+        <div class="flex-1"></div>
+        <a class="rounded-xl mr-8 mb-8 text-3xl text-black-300" href="https://github.com/Ahwxorg"><i class="fa-brands fa-github"></i></a>
+        <a class="rounded-xl mr-8 mb-8 text-3xl text-black-300" href="https://social.quack.social/@ahwx"><i class="fa-brands fa-mastodon"></i></a>
+      </div>
+      </div>
     </div>
   </body>
 </html>
