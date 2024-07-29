@@ -3,6 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Heading from '../components/Heading.astro'
 import Paragraph from '../components/Paragraph.astro'
 import Greeting from '../components/Greeting.jsx'
+
+const images = await Astro.glob("../../public/assets/galleryImages/*").then(files => {
+  return files.map(file => file.default);
+});
 ---
 
 <Layout title="liv - garden" description="liv to your fullest">
@@ -10,6 +14,14 @@ import Greeting from '../components/Greeting.jsx'
     <div class="">
       <Heading><Greeting client:load />!</Heading>
       <center><Paragraph>Gallery of images that I've shot</Paragraph></center>
+      <center><Paragraph>All of these images are copyrighted to me. <a href="/contact" class="underline underline-offset-1">Contact me</a> for more information.</Paragraph></center>
+      <div class="mt-8 gap-8 w-5/6 mx-auto columns-1 sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8">
+        {
+          images.map(({ src }) => (
+          <div class="mt-0 m-4 w-full backdrop-blur-xl shadow-2xl p-4"><img src={src} alt="" loading="lazy"></div>
+          ))
+        }
+      </div>
     </div>
     <aside transition:name="main-page">
 </main>
