@@ -2,10 +2,19 @@
 import Layout from '../layouts/Layout.astro';
 import Heading from '../components/Heading.astro'
 import Paragraph from '../components/Paragraph.astro'
+import BloglistItem from '../components/BloglistItem.astro'
 import NormalLink from '../components/NormalLink.astro'
-import BlankLink from '../components/BlankLink.astro'
-import HeaderLink from '../components/HeaderLink.astro'
 import Greeting from '../components/Greeting.jsx'
+import { run } from "webring";
+
+const result = await run({
+  sources: [
+    {
+      url: "https://blog.ahwx.org/rss.xml",
+      title: "blog.ahwx.org",
+    },
+  ],
+});
 ---
 
 <Layout title="liv - balcony" description="liv to your fullest">
@@ -14,6 +23,14 @@ import Greeting from '../components/Greeting.jsx'
       <Heading><Greeting client:load />!</Heading>
       <Paragraph>Imagine liv.town being a neat house on top of a mountain, see this page as the balcony, this is a neat littly place where you can view over the valley. Each house in the valley is it's own little blog post.</Paragraph>
       <Paragraph><center><NormalLink href="https://blog.ahwx.org">Dive in!</NormalLink></center></Paragraph>
+        <Paragraph><center>
+          <ul>
+            <li><BloglistItem title="Hello world!" description="Lorum ipsum or whatever" href="https://blog.ahwx.org/hello-world"/></li>
+            <li><BloglistItem title="Hello world!" description="Lorum ipsum or whatever" href="https://blog.ahwx.org/hello-world"/></li>
+            <li><BloglistItem title="Hello world!" description="Lorum ipsum or whatever" href="https://blog.ahwx.org/hello-world"/></li>
+            <li><BloglistItem title="Hello world!" description="Lorum ipsum or whatever" href="https://blog.ahwx.org/hello-world"/></li>
+          </ul>
+        </center></Paragraph>
     </div>
     <aside transition:name="main-page">
 </main>
