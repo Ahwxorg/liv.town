@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Heading from '../components/Heading.astro'
+import Paragraph from '../components/Paragraph.astro'
+import Greeting from '../components/Greeting.jsx'
+import { slide } from 'astro:transitions';
+---
+
+<Layout title="liv - garden" description="liv to your fullest">
+<main>
+    <div class="">
+      <Heading><Greeting client:load />!</Heading>
+      <center><Paragraph>You can contact me using the following media:</Paragraph></center>
+      <Paragraph>Matrix: <a href="https://matrix.to/#/@liv:liv.town" class="underline underline-offset-1">@liv:liv.town</a></Paragraph>
+      <Paragraph>Fediverse: <a href="https://quack.social/@liv" class="underline underline-offset-1">@liv@quack.social</a></Paragraph>
+      <Paragraph>Mail: ahwx at ahwx dot org</Paragraph>
+    </div>
+    <aside transition:name="main-page">
+</main>
+</Layout>
