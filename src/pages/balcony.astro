@@ -24,10 +24,13 @@ const result = await run({
       <Paragraph>Imagine liv.town being a neat house on top of a mountain, see this page as the balcony, this is a neat littly place where you can view over the valley. Each house in the valley is it's own little blog post.</Paragraph>
       <Paragraph><center>
         <ul>
-          <li><BloglistItem title="Hello world!" description="Lorum ipsum or whatever" href="https://blog.ahwx.org/hello-world"/></li>
-          <li><BloglistItem title="Hello world!" description="Lorum ipsum or whatever" href="https://blog.ahwx.org/hello-world"/></li>
-          <li><BloglistItem title="Hello world!" description="Lorum ipsum or whatever" href="https://blog.ahwx.org/hello-world"/></li>
-          <li><BloglistItem title="Hello world!" description="Lorum ipsum or whatever" href="https://blog.ahwx.org/hello-world"/></li>
+          {
+            result.map((post) => (
+              <li>
+                  <BloglistItem href={post.url} title={post.title} description={post.date.toLocaleString()} />
+              </li>
+            ))
+          }
         </ul>
       </center></Paragraph>
     </div>
