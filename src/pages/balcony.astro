@@ -5,15 +5,24 @@ import Paragraph from '../components/Paragraph.astro'
 import BloglistItem from '../components/BloglistItem.astro'
 import NormalLink from '../components/NormalLink.astro'
 import Greeting from '../components/Greeting.jsx'
-import { run } from "webring";
+import { type Configuration, type Result, run } from "webring";
 
-const result = await run({
+const results = await run({
   sources: [
     {
       url: "https://blog.ahwx.org/rss.xml",
       title: "blog.ahwx.org",
     },
+    {
+      url: "https://blog.ahwx.org/rss.xml",
+      title: "blog.ahwx.org",
+    },
+    {
+      url: "https://blog.ahwx.org/rss.xml",
+      title: "blog.ahwx.org",
+    },
   ],
+  number: 9,
 });
 ---
 
@@ -21,14 +30,12 @@ const result = await run({
 <main>
     <div class="">
       <Heading><Greeting client:load />!</Heading>
-      <Paragraph>Imagine liv.town being a neat house on top of a mountain, see this page as the balcony, this is a neat littly place where you can view over the valley. Each house in the valley is it's own little blog post.</Paragraph>
+      <Paragraph>Imagine liv.town being a neat house on top of a mountain, see this page as the balcony, this is a neat littly place where you can view over the valley. Each house in the valley is it's own little blog post from blogs I follow. Should update automatically.</Paragraph>
       <Paragraph><center>
         <ul>
           {
-            result.map((post) => (
-              <li>
-                  <BloglistItem href={post.url} title={post.title} description={post.date.toLocaleString()} />
-              </li>
+            results.map((post) => (
+              <BloglistItem href={post.url} title={post.title} description={post.date.toLocaleString()} />
             ))
           }
         </ul>
