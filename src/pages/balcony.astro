@@ -18,8 +18,8 @@ const results = await run({
       title: "text.causal.agency",
     },
     {
-      url: "",
-      title: "",
+      url: "https://davidovski.xyz/rss.xml",
+      title: "davidovski.xyz",
     },
   ],
   number: 9,
@@ -35,7 +35,7 @@ const results = await run({
         <ul>
           {
             results.map((post) => (
-              <BloglistItem href={post.url} title={post.title} description={post.date.toLocaleString()} />
+              <BloglistItem href={post.url} title={post.title} source={post.source.title} date={post.date.toLocaleString()} />
             ))
           }
         </ul>
