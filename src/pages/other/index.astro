@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Heading from '../../components/Heading.astro'
+import Paragraph from '../../components/Paragraph.astro'
+import Greeting from '../../components/Greeting.jsx'
+import { slide } from 'astro:transitions';
+import OtherListItem from '../../components/OtherListItem.astro';
+
+const otherPosts = (await Astro.glob('./*.md')).sort(
+  (a: any, b: any) =>
+    new Date(b.frontmatter.createdAt).valueOf() -
+    new Date(a.frontmatter.createdAt).valueOf()
+)
+---
+
+<Layout title="liv - garden" description="liv to your fullest">
+<main>
+    <div class="">
+      <Heading><Greeting client:load />!</Heading>
+      <center><Paragraph>This page is kind of a wiki/other/links/anything page.</Paragraph></center>
+      <br class="h-3/5">
+      <center><Paragraph>
+          {
+            otherPosts.map((post) => (
+              <OtherListItem href={post.url} title={post.frontmatter.title} description={post.frontmatter.description} date={post.frontmatter.date} />
+            ))
+          }
+      </Paragraph></center>
+    </div>
+    <aside transition:name="main-page">
+</main>
+</Layout>
+
+
+
