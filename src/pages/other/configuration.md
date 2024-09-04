@@ -1,12 +1,12 @@
 ---
 title: configuration for devices i use (often)
-date: 2024-08-30
+date: 2024-09-04
 layout: ../../layouts/otherPost.astro
 ---
 
 # Linux systems
 
-Favorite programs (prone to changes)
+Favorite things regarding Linux and my workflow (prone to changes)
 
 | item                           | name                |
 | ------------------------------ | ------------------- |
@@ -37,4 +37,6 @@ Currently, my main device is a Framework Laptop 13 (sakura)
 
 <br>
 
-sakura has a Ryzen 5 7640U, 32GB of DDR5 at 5600MHz (Kingston Fury Impact) memory and a 2TB (Crucial P5 Plus) NVMe drive. sakura runs NixOS with full-disk-encryption. I have a setup consisting of Hyprland with most of the software mentioned above. I use Nix when I need software without installing it.
+sakura has a Ryzen 5 7640U, 32GB of DDR5 at 5600MHz (Kingston Fury Impact) memory and a 2TB (Crucial P5 Plus) NVMe drive. sakura runs NixOS with full-disk-encryption. I have a setup consisting of Hyprland with most of the software mentioned above. I use Nix when I need software without installing it. it's desktop looks like this:
+
+![screenshot of the desktop of sakura](/assets/img/screenshot-sakura.png)
