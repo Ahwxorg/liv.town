@@ -1,85 +1,17 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
-import Navbar from '../components/Navbar.astro';
-import Heading from '../components/Heading.astro';
 import Paragraph from '../components/Paragraph.astro';
-import Greeting from '../components/Greeting';
-
-// interface Props {
-//   title: string;
-//   description: string;
-// }
-// 
-// const { title, description } = Astro.props;
-
-const title = "liv - other pages";
-const description = "liv to your fullest";
-
-import { HOMEPAGE_URL } from '../config.ts';
+import Layout from '../layouts/Layout.astro';
 ---
-<html>
-  <head>
-    <!-- Global Metadata -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="icon" type="image/png" href="/logo.png" />
-    <meta name="generator" content={Astro.generator} />
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href={ HOMEPAGE_URL } />
-    
-    <!-- Primary Meta Tags -->
-    <title>{title}</title>
-    <meta name="title" content={title} />
-    <meta name="description" content={description} />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content="/logo.png" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={Astro.url} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content="/logo.png" />
-    
-    <!-- Disable Dark Reader -->
-    <meta name="darkreader-lock">
 
-    <!-- Adds font-awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <ViewTransitions />
-  </head>
-
-  <body class="bg-cover bg-fixed bg-[url('/assets/img/background.png')] bg-black">
-    <Navbar />
-    <div>
-      <main>
-        <div class="">
-          <Heading><Greeting client:load />!</Heading>
-          <br class="h-3/5">
-          <Paragraph>
-            <slot />
-          </Paragraph>
-          <br class="mb-20">
-        </div>
-        <aside transition:name="main-page">
-      </main>
-      <div class="fixed bottom-0 h-12 w-full flex pq2 z-20">
-        <div class="ml-8 mb-8">
-          <iframe class="m-0 p-0 border-none" src="https://status.ahwx.org/badge?theme=dark" scrolling="no" width="250" height="30" frameborder="0"></iframe>
-		</div>
-        <div class="flex-1"></div>
-          <a class="rounded-xl mr-8 mb-8 text-3xl text-black-300" href="mailto:liv@liv.town"><i class="fa-classic fa-at"></i></a>
-          <a class="rounded-xl mr-8 mb-8 text-3xl text-black-300" href="https://github.com/Ahwxorg"><i class="fa-brands fa-github"></i></a>
-          <a class="rounded-xl mr-8 mb-8 text-3xl text-black-300" href="https://quack.social/@liv"><i class="fa-brands fa-mastodon"></i></a>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
-
+<Layout title="liv - other page" description="liv to your fullest">
+  <div class="">
+    <br class="h-3/5">
+    <Paragraph>
+      <slot />
+    </Paragraph>
+    <br class="mb-20">
+  </div>
+  <aside transition:name="main-page">
+  <ViewTransitions />
+</Layout>
