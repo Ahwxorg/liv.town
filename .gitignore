@@ -1,6 +1,9 @@
 # build output
 dist/
 
+# public pictures 
+public/assets/galleryImages/orignals
+
 # generated types
 .astro/
 
