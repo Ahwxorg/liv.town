@@ -14,9 +14,19 @@ const images = await Astro.glob("../../public/assets/galleryImages/*").then(file
 <main>
     <div class="">
       <Heading><Greeting client:load />!</Heading>
-      <center><Paragraph>Gallery of images that I've shot</Paragraph></center>
-      <center><Paragraph>All of these images are copyrighted to me. <a href="/contact" class="underline underline-offset-1">Contact me</a> for more information.</Paragraph></center>
-      <center><Paragraph>I am not going to put watermarks on the images, as that'll ruin their vibe, I think. Please do not use them without explicit permission from me.</Paragraph></center>
+      <Paragraph>All of these images are copyrighted to me. <a href="/contact" class="underline underline-offset-1">Contact me</a> for more information.</Paragraph>
+      <br>
+      <Paragraph>I am not going to put watermarks on the images, as that'll ruin their vibe, I think. Please do not use them without explicit permission from me.</Paragraph>
+      <br>
+      <Paragraph>All of these pictures are editted with Darktable on Linux, they're probably over-editted, but that's kinda how I like it.</Paragraph>
+      <br>
+      <br>
+      <Paragraph>For the nerds :)</Paragraph>
+      <Paragraph>Gear: (I don't currently own everything stated below)</Paragraph>
+      <Paragraph>Camera bodies: Sony A7ii <strong>|</strong> Nikon D5200</Paragraph>
+      <Paragraph>E-mount lenses: Sony FE 28-70mm f3.5-5.6 OSS</Paragraph>
+      <Paragraph>F-mount lenses: Nikon 35mm f/1.8G <strong>|</strong> Nikon 18-140mm f/3.5-5.6 ED VR <strong>|</strong> Nikon 28-300mm f/3.5-5.6G ED VR</Paragraph>
+      <Paragraph>M42-mount lenses: SMC TAKUMAR 50mm f/1.4 <strong>|</strong> HANIMAR AUTO "S" 135mm f/2.8 <strong>|</strong> PANAGOR AUTO TELE 200mm f/3.5</Paragraph>
       <div class="mt-8 mb-20 gap-8 w-5/6 mx-auto columns-1 sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8" transition:animate={slide({ duration: '0.4s' })}>
         {
           images.map(({ src }) => (
