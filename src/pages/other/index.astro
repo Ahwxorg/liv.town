@@ -6,7 +6,7 @@ import Greeting from '../../components/Greeting.jsx'
 import { slide } from 'astro:transitions';
 import OtherListItem from '../../components/OtherListItem.astro';
 
-const otherPosts = (await Astro.glob('./*.md')).sort(
+const otherPosts = (await Astro.glob('./*.mdx')).sort(
   (a: any, b: any) =>
     new Date(b.frontmatter.createdAt).valueOf() -
     new Date(a.frontmatter.createdAt).valueOf()
