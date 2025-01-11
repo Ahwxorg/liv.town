@@ -6,42 +6,54 @@ layout: ../../layouts/otherPost.astro
 
 # Linux systems
 
-Favorite things regarding Linux and my workflow (prone to changes)
+Favorite things regarding Linux and my workflow (changes often)
 
-| item                           | name                  |
-| ------------------------------ | --------------------- |
-| architecture                   | x86_64 (rip m2 pro)   |
-| distro                         | nixos or gentoo       |
-| init system                    | openrc                |
-| package manager                | nix or emerge         |
-| shell                          | zsh                   |
-| web server                     | nginx                 |
-| terminal emulator              | kitty                 |
-| browser                        | firefox               |
-| video editor(s)                | blender or vegas pro  |
-| photo editor(s)                | gimp/darktable        |
-| privilege escalation tool      | doas                  |
-| vpn                            | wireguard             |
-| editor                         | neovim                |
-| instant messaging              | matrix (nheko)        |
-| instant messaging (m)          | fluffychat            |
-| instant messaging (m, xmpp)    | conversations         |
-| music (streaming)              | spotify               |
-| version control                | git                   |
-| window manager (xorg)          | bspwm                 |
-| compositor (wayland)           | hyprland              |
-| nodejs package manager         | yarn                  |
-| programming/scripting language | bash                  |
-| webdev language/framework      | astrojs               |
+| item                           | name                     |
+| ------------------------------ | ------------------------ |
+| port                           | vga (won't change)       |
+| architecture                   | x86_64/aarch64 (rip m2 ) |
+| distro                         | nixos (or debian/gentoo) |
+| init system                    | openrc                   |
+| package manager                | nix or emerge            |
+| shell                          | zsh                      |
+| web server                     | nginx                    |
+| terminal emulator              | kitty                    |
+| browser                        | firefox                  |
+| video editor(s)                | blender or vegas pro     |
+| photo editor(s)                | gimp/darktable           |
+| privilege escalation tool      | doas                     |
+| vpn                            | wireguard                |
+| editor                         | neovim                   |
+| instant messaging              | none                     |
+| instant messaging (m)          | fluffychat               |
+| instant messaging (xmpp)       | none                     |
+| instant messaging (m, xmpp)    | conversations            |
+| music (streaming)              | spotify                  |
+| version control                | git                      |
+| window manager (xorg)          | bspwm                    |
+| compositor (wayland)           | hyprland                 |
+| nodejs package manager         | yarn                     |
+| scripting language             | bash                     |
+| programming language           | golang                   |
+| webdev language/framework      | astrojs                  |
 
 <br/>
 
-Currently, my main device is a Framework Laptop 13 (sakura)
+Currently, my main devices are: 
+- a Framework Laptop 13 running NixOS (sakura)
+- a ThinkPad X230 running NixOS (ichiyo)
+- a custom-built PC running NixOS (yoshino)
+- another X230 running Windows, used for printing etc
 
 <br/>
 
 sakura has a Ryzen 5 7640U, 32GB of DDR5 at 5600MHz (Kingston Fury Impact) memory and a 2TB (Crucial P5 Plus) NVMe drive. sakura runs NixOS with full-disk-encryption. I have a setup consisting of Hyprland with most of the software mentioned above. I use nix-shell when I need software without installing it. It's desktop looks like this:
+<br/>
 
+ichiyo has a Core i5-3320M, 16GB of DDR3(L? I don't know actually...) at 1866MHz memory and a 240GB (Kingston A400) SATA SSD. It has a ThinkPad xx20 series Japanese keyboard, custom external WiFi antennas, an added USB-C port and <del>runs</del> will probably soon run Libreboot. ichiyo runs NixOS with full-disk-encryption and is setup almost the same as sakura.
+<br/>
+
+yoshino has a Threadripper 1920X, 64GB of DDR4 at 3200MHz (Vengeance LPX) memory, an AMD Radeon RX 5700XT graphics card and a 512GB (some Toshiba OEM drive that came out of an X280) NVMe drive. yoshino runs NixOS with the same setup as all of the others, but tailored towards desktop usage (so no power-saving etc). I might switch to 10GbE at some point when I get my storage sorted.
 <br/>
 
 ![screenshot of the desktop of sakura](/assets/img/screenshot-sakura.png)
