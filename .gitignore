@@ -20,6 +20,12 @@ pnpm-debug.log*
 .env
 .env.production
 
+# yarn-berry shit
+.yarn/
+.pnp.cjs
+.pnp.loader.mjs
+.yarnrc.yml
+
 # macOS-specific files
 .DS_Store
 
